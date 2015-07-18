@@ -70,16 +70,16 @@ def getMatchDay(soup, multipleDays):
         else:
             matchState = matchState.get_text()
         if matchState.find('Day 1') != -1:
-            return ", Day 1"
-        elif matchState.find('Day 2') != -1:
             return ", Day 2"
-        elif matchState.find('Day 3') != -1:
+        elif matchState.find('Day 2') != -1:
             return ", Day 3"
-        elif matchState.find('Day 4') != -1:
+        elif matchState.find('Day 3') != -1:
             return ", Day 4"
+        elif matchState.find('Day 4') != -1:
+            return ", Day 5"
         elif matchState.find('Day 5') != -1:
             return ", Day 5"
-        return ""
+        return ", Day 1"
     else:
         return ""
 
